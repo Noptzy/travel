@@ -1,0 +1,16 @@
+{
+  "jakarta": { "lat": -6.2088, "lng": 106.8456 },
+  "surabaya": { "lat": -7.2575, "lng": 112.7521 },
+  "bali": { "lat": -8.4095, "lng": 115.1889 },
+  "denpasar": { "lat": -8.6705, "lng": 115.2126 },
+  "bandung": { "lat": -6.9175, "lng": 107.6191 },
+  "yogyakarta": { "lat": -7.7956, "lng": 110.3695 },
+  "jepang": { "lat": 35.6762, "lng": 139.6503 },
+  "japan": { "lat": 35.6762, "lng": 139.6503 },
+  "tokyo": { "lat": 35.6762, "lng": 139.6503 },
+  "korea": { "lat": 37.5665, "lng": 126.9780 },
+  "korea-selatan": { "lat": 37.5665, "lng": 126.9780 },
+  "south-korea": { "lat": 37.5665, "lng": 126.9780 },
+  "seoul": { "lat": 37.5665, "lng": 126.9780 },
+  "semarang": { "lat": -6.9667, "lng": 110.4167 }
+}

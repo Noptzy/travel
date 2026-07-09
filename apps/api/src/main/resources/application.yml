@@ -1,0 +1,62 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  config:
+    import: optional:file:../../.env[.properties],optional:file:.env[.properties]
+  application:
+    name: makeyour-jurney-api
+  mvc:
+    async:
+      request-timeout: ${ASYNC_REQUEST_TIMEOUT_MS:320000}
+  datasource:
+    url: ${DATABASE_URL:jdbc:mysql://localhost:53306/makeyour_jurney}
+    username: ${DATABASE_USERNAME:root}
+    password: ${DATABASE_PASSWORD:root}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+  cache:
+    type: redis
+
+app:
+  seed:
+    enabled: ${USE_SEED_DATA:false}
+  apify:
+    enabled: ${APIFY_ENABLED:false}
+    base-url: ${APIFY_BASE_URL:https://api.apify.com/v2}
+    token: ${APIFY_TOKEN:}
+    timeout-seconds: ${APIFY_TIMEOUT_SECONDS:300}
+    max-items-hotels: ${APIFY_MAX_ITEMS_HOTELS:20}
+    max-items-activities: ${APIFY_MAX_ITEMS_ACTIVITIES:20}
+    max-reviews: ${APIFY_MAX_REVIEWS:30}
+    cache-ttl-hours: ${APIFY_CACHE_TTL_HOURS:24}
+    hotel-actor-id: ${APIFY_HOTEL_ACTOR_ID:hotels-scrapers/traveloka-hotel-scraper}
+    activity-actor-id: ${APIFY_ACTIVITY_ACTOR_ID:stealth_mode/traveloka-activities-search-scraper}
+    review-actor-id: ${APIFY_REVIEW_ACTOR_ID:knagymate/traveloka-reviews-scraper}
+    places-actor-id: ${APIFY_PLACES_ACTOR_ID:compass/crawler-google-places}
+  maps:
+    enabled: ${MAPS_ENABLED:false}
+    provider: ${MAPS_PROVIDER:openrouteservice}
+    ors-api-key: ${ORS_API_KEY:}
+    ors-base-url: ${ORS_BASE_URL:https://api.openrouteservice.org}
+    cache-ttl-hours: ${MAPS_CACHE_TTL_HOURS:168}
+    default-country: ${MAPS_DEFAULT_COUNTRY:ID}
+  ai:
+    provider: ${AI_PROVIDER:openrouter}
+    base-url: ${AI_BASE_URL:https://openrouter.ai/api/v1}
+    api-key: ${AI_API_KEY:}
+    model: ${AI_MODEL:meta-llama/llama-3.3-70b-instruct:free}
+  jwt:
+    secret: ${JWT_SECRET:}
+    access-expiry-minutes: ${JWT_ACCESS_EXPIRY_MINUTES:15}
+    refresh-expiry-days: ${JWT_REFRESH_EXPIRY_DAYS:7}
+  plan-cache-ttl-minutes: ${PLAN_CACHE_TTL_MINUTES:15}

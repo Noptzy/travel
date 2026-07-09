@@ -1,0 +1,76 @@
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: makeyour_jurney
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "53306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ./apps/api
+      dockerfile: Dockerfile
+    ports:
+      - "${SERVER_PORT:-8080}:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      SERVER_PORT: 8080
+      SPRING_PROFILES_ACTIVE: ${DOCKER_SPRING_PROFILES_ACTIVE:-docker}
+      DATABASE_URL: jdbc:mysql://mysql:3306/makeyour_jurney
+      DATABASE_USERNAME: root
+      DATABASE_PASSWORD: root
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      USE_SEED_DATA: ${DOCKER_USE_SEED_DATA:-${USE_SEED_DATA:-false}}
+      AI_PROVIDER: ${AI_PROVIDER:-openrouter}
+      AI_BASE_URL: ${AI_BASE_URL:-https://openrouter.ai/api/v1}
+      AI_API_KEY: ${AI_API_KEY:-}
+      AI_MODEL: ${AI_MODEL:-meta-llama/llama-3.3-70b-instruct:free}
+      APIFY_ENABLED: ${DOCKER_APIFY_ENABLED:-${APIFY_ENABLED:-false}}
+      APIFY_TOKEN: ${APIFY_TOKEN:-}
+      APIFY_BASE_URL: ${APIFY_BASE_URL:-https://api.apify.com/v2}
+      APIFY_TIMEOUT_SECONDS: ${APIFY_TIMEOUT_SECONDS:-300}
+      APIFY_MAX_ITEMS_HOTELS: ${APIFY_MAX_ITEMS_HOTELS:-20}
+      APIFY_MAX_ITEMS_ACTIVITIES: ${APIFY_MAX_ITEMS_ACTIVITIES:-20}
+      APIFY_MAX_REVIEWS: ${APIFY_MAX_REVIEWS:-30}
+      APIFY_CACHE_TTL_HOURS: ${APIFY_CACHE_TTL_HOURS:-24}
+      APIFY_HOTEL_ACTOR_ID: ${APIFY_HOTEL_ACTOR_ID:-hotels-scrapers/traveloka-hotel-scraper}
+      APIFY_ACTIVITY_ACTOR_ID: ${APIFY_ACTIVITY_ACTOR_ID:-stealth_mode/traveloka-activities-search-scraper}
+      APIFY_REVIEW_ACTOR_ID: ${APIFY_REVIEW_ACTOR_ID:-knagymate/traveloka-reviews-scraper}
+      APIFY_PLACES_ACTOR_ID: ${APIFY_PLACES_ACTOR_ID:-compass/crawler-google-places}
+      MAPS_ENABLED: ${DOCKER_MAPS_ENABLED:-true}
+      MAPS_PROVIDER: ${MAPS_PROVIDER:-osm}
+      ORS_API_KEY: ${ORS_API_KEY:-}
+      ORS_BASE_URL: ${ORS_BASE_URL:-https://api.openrouteservice.org}
+      MAPS_CACHE_TTL_HOURS: ${MAPS_CACHE_TTL_HOURS:-168}
+      MAPS_DEFAULT_COUNTRY: ${MAPS_DEFAULT_COUNTRY:-ID}
+      JWT_SECRET: ${JWT_SECRET:-dev-local-secret-key-minimum-32-characters-long-for-hs256}
+      JWT_ACCESS_EXPIRY_MINUTES: ${JWT_ACCESS_EXPIRY_MINUTES:-15}
+      JWT_REFRESH_EXPIRY_DAYS: ${JWT_REFRESH_EXPIRY_DAYS:-7}
+      PLAN_CACHE_TTL_MINUTES: ${PLAN_CACHE_TTL_MINUTES:-15}
+    restart: unless-stopped
+
+volumes:
+  mysql_data:

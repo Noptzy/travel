@@ -1,0 +1,62 @@
+[
+  {
+    "externalId": "sby-act-1",
+    "name": "House of Sampoerna Tour",
+    "city": "Surabaya",
+    "address": "Jl. Taman Sampoerna No. 6, Surabaya",
+    "pricePerPerson": 0,
+    "currency": "IDR",
+    "rating": 8.2,
+    "reviewCount": 410,
+    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/activity/indonesia/seed-sby-act-1",
+    "durationHours": 1.5,
+    "tags": ["budaya", "museum", "gratis"]
+  },
+  {
+    "externalId": "sby-act-2",
+    "name": "Surabaya Zoo",
+    "city": "Surabaya",
+    "address": "Jl. Setail No. 1, Surabaya",
+    "pricePerPerson": 50000,
+    "currency": "IDR",
+    "rating": 7.4,
+    "reviewCount": 892,
+    "imageUrl": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/activity/indonesia/seed-sby-act-2",
+    "durationHours": 3,
+    "tags": ["keluarga", "alam"]
+  },
+  {
+    "externalId": "sby-act-3",
+    "name": "House of Cheng Ho",
+    "city": "Surabaya",
+    "address": "Jl. Gading No. 2, Surabaya",
+    "pricePerPerson": 25000,
+    "currency": "IDR",
+    "rating": 7.9,
+    "reviewCount": 256,
+    "imageUrl": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/activity/indonesia/seed-sby-act-3",
+    "durationHours": 1,
+    "tags": ["budaya", "religi"]
+  },
+  {
+    "externalId": "sby-act-4",
+    "name": "Ciputra Waterpark",
+    "city": "Surabaya",
+    "address": "Citraland, Surabaya",
+    "pricePerPerson": 120000,
+    "currency": "IDR",
+    "rating": 8.6,
+    "reviewCount": 1340,
+    "imageUrl": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/activity/indonesia/seed-sby-act-4",
+    "durationHours": 4,
+    "tags": ["keluarga", "adventure", "waterpark"]
+  }
+]

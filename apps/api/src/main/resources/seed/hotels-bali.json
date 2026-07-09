@@ -1,0 +1,54 @@
+[
+  {
+    "externalId": "bali-hotel-1",
+    "name": "Kuta Backpacker Hostel",
+    "city": "Bali",
+    "address": "Jl. Legian No. 5, Kuta, Bali",
+    "pricePerNight": 180000,
+    "currency": "IDR",
+    "rating": 7.2,
+    "reviewCount": 540,
+    "imageUrl": "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/hotel/indonesia/seed-bali-hotel-1"
+  },
+  {
+    "externalId": "bali-hotel-2",
+    "name": "Seminyak Beach Hotel",
+    "city": "Bali",
+    "address": "Jl. Kayu Aya No. 10, Seminyak, Bali",
+    "pricePerNight": 650000,
+    "currency": "IDR",
+    "rating": 8.7,
+    "reviewCount": 980,
+    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/hotel/indonesia/seed-bali-hotel-2"
+  },
+  {
+    "externalId": "bali-hotel-3",
+    "name": "Ubud Jungle Resort",
+    "city": "Bali",
+    "address": "Jl. Raya Ubud No. 20, Ubud, Bali",
+    "pricePerNight": 1200000,
+    "currency": "IDR",
+    "rating": 9.3,
+    "reviewCount": 1450,
+    "imageUrl": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/hotel/indonesia/seed-bali-hotel-3"
+  },
+  {
+    "externalId": "bali-hotel-4",
+    "name": "Denpasar City Inn",
+    "city": "Bali",
+    "address": "Jl. Gatot Subroto No. 8, Denpasar, Bali",
+    "pricePerNight": 320000,
+    "currency": "IDR",
+    "rating": 7.8,
+    "reviewCount": 410,
+    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/hotel/indonesia/seed-bali-hotel-4"
+  }
+]

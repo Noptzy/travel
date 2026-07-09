@@ -1,0 +1,62 @@
+[
+  {
+    "externalId": "bali-act-1",
+    "name": "Tanah Lot Sunset Tour",
+    "city": "Bali",
+    "address": "Tanah Lot, Tabanan, Bali",
+    "pricePerPerson": 30000,
+    "currency": "IDR",
+    "rating": 8.8,
+    "reviewCount": 2100,
+    "imageUrl": "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/activity/indonesia/seed-bali-act-1",
+    "durationHours": 2,
+    "tags": ["alam", "budaya", "sunset"]
+  },
+  {
+    "externalId": "bali-act-2",
+    "name": "Ubud Monkey Forest",
+    "city": "Bali",
+    "address": "Jl. Monkey Forest, Ubud, Bali",
+    "pricePerPerson": 80000,
+    "currency": "IDR",
+    "rating": 8.1,
+    "reviewCount": 1780,
+    "imageUrl": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/activity/indonesia/seed-bali-act-2",
+    "durationHours": 1.5,
+    "tags": ["alam", "keluarga"]
+  },
+  {
+    "externalId": "bali-act-3",
+    "name": "Mount Batur Sunrise Trekking",
+    "city": "Bali",
+    "address": "Kintamani, Bangli, Bali",
+    "pricePerPerson": 350000,
+    "currency": "IDR",
+    "rating": 9.0,
+    "reviewCount": 980,
+    "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/activity/indonesia/seed-bali-act-3",
+    "durationHours": 6,
+    "tags": ["adventure", "alam", "healing"]
+  },
+  {
+    "externalId": "bali-act-4",
+    "name": "Waterbom Bali",
+    "city": "Bali",
+    "address": "Jl. Kartika Plaza, Kuta, Bali",
+    "pricePerPerson": 450000,
+    "currency": "IDR",
+    "rating": 8.9,
+    "reviewCount": 3200,
+    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/activity/indonesia/seed-bali-act-4",
+    "durationHours": 4,
+    "tags": ["keluarga", "adventure", "waterpark"]
+  }
+]

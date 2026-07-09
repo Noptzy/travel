@@ -1,0 +1,54 @@
+[
+  {
+    "externalId": "sby-hotel-1",
+    "name": "Hotel Sederhana Surabaya",
+    "city": "Surabaya",
+    "address": "Jl. Pemuda No. 12, Surabaya",
+    "pricePerNight": 220000,
+    "currency": "IDR",
+    "rating": 7.5,
+    "reviewCount": 312,
+    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/hotel/indonesia/seed-sby-hotel-1"
+  },
+  {
+    "externalId": "sby-hotel-2",
+    "name": "Surabaya Suites",
+    "city": "Surabaya",
+    "address": "Jl. Tunjungan No. 45, Surabaya",
+    "pricePerNight": 450000,
+    "currency": "IDR",
+    "rating": 8.4,
+    "reviewCount": 587,
+    "imageUrl": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/hotel/indonesia/seed-sby-hotel-2"
+  },
+  {
+    "externalId": "sby-hotel-3",
+    "name": "Grand Surabaya Hotel",
+    "city": "Surabaya",
+    "address": "Jl. Basuki Rahmat No. 8, Surabaya",
+    "pricePerNight": 850000,
+    "currency": "IDR",
+    "rating": 9.1,
+    "reviewCount": 1023,
+    "imageUrl": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/hotel/indonesia/seed-sby-hotel-3"
+  },
+  {
+    "externalId": "sby-hotel-4",
+    "name": "Wonokromo Budget Inn",
+    "city": "Surabaya",
+    "address": "Jl. Wonokromo No. 3, Surabaya",
+    "pricePerNight": 150000,
+    "currency": "IDR",
+    "rating": 6.8,
+    "reviewCount": 198,
+    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    "source": "seed",
+    "sourceUrl": "https://www.traveloka.com/en-id/hotel/indonesia/seed-sby-hotel-4"
+  }
+]
