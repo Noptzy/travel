@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.LaunchedEffect
 import coil3.SingletonImageLoader
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -28,11 +29,15 @@ class MainActivity : ComponentActivity() {
                 )
                 val session by authViewModel.session.collectAsStateWithLifecycle()
                 val profile by authViewModel.profile.collectAsStateWithLifecycle()
+                val currentProfile = profile
                 if (session == null) {
                     AuthNavHost(authViewModel)
                 } else {
                     val plannerViewModel: PlannerViewModel = viewModel(factory = PlannerViewModel.factory(container.createTripPlan, container.planHistoryStore))
-                    TravelApp(plannerViewModel, profile, onLogout = { authViewModel.logout() })
+                    LaunchedEffect(currentProfile?.id, currentProfile?.email) {
+                        plannerViewModel.setHistoryOwner(currentProfile?.id?.ifBlank { currentProfile.email } ?: currentProfile?.email)
+                    }
+                    TravelApp(plannerViewModel, currentProfile, onLogout = { authViewModel.logout() })
                 }
             }
         }

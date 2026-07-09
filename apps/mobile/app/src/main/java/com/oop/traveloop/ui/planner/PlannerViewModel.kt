@@ -53,6 +53,7 @@ class PlannerViewModel(
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(PlannerUiState())
     val uiState: StateFlow<PlannerUiState> = _uiState.asStateFlow()
+    private var historyOwner: String? = null
 
     init {
         viewModelScope.launch {
@@ -65,6 +66,13 @@ class PlannerViewModel(
                 }
             }
         }
+    }
+
+    fun setHistoryOwner(userKey: String?) {
+        if (historyOwner == userKey) return
+        historyOwner = userKey
+        planHistoryStore.setOwner(userKey)
+        _uiState.update { it.copy(plan = null, planHistory = emptyList(), error = null) }
     }
 
     fun onAction(action: PlannerAction) {
